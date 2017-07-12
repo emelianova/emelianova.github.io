@@ -1,0 +1,20 @@
+```{r}
+fibonacci <- function(n) {
+  res <- seq_len(n)
+  res[2] <- 1
+  for(i in seq(3,n)) res[i] <- res[i-1] + res[i-2]
+  res
+}
+
+rplot <- function(n) {
+  plot(sin(2*pi*fibonacci(n^2)/n), cos(2*pi*fibonacci(n^2)/n),
+     type="l")
+}
+
+rplot(4)
+rplot(5)
+rplot(6)
+rplot(7)
+rplot(8)
+rplot(9)
+```
